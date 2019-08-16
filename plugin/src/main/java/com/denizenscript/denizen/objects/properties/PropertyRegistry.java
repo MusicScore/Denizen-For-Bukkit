@@ -84,6 +84,11 @@ public class PropertyRegistry {
         PropertyParser.registerProperty(EntitySpell.class, EntityTag.class);
         PropertyParser.registerProperty(EntityTame.class, EntityTag.class);
         PropertyParser.registerProperty(EntityTrades.class, EntityTag.class);
+        if (NMSHandler.getVersion().isAtLeast(NMSVersion.v1_14_R1)) {
+            PropertyParser.registerProperty(EntityVillagerExperience.class, EntityTag.class);
+            PropertyParser.registerProperty(EntityVillagerLevel.class, EntityTag.class);
+            PropertyParser.registerProperty(EntityVillagerType.class, EntityTag.class);
+        }
         PropertyParser.registerProperty(EntityVisible.class, EntityTag.class);
 
         // register core InventoryTag properties
